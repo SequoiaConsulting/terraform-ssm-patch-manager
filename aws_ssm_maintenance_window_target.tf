@@ -3,7 +3,7 @@ resource "aws_ssm_maintenance_window_target" "patching_window_target" {
   resource_type = "INSTANCE"
 
   targets {
-    key    = "tag:environment"
+    key    = "environment"
     values = [var.environment]
   }
 //  targets {
