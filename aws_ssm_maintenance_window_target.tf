@@ -4,7 +4,7 @@ resource "aws_ssm_maintenance_window_target" "patching_window_target" {
 
   targets {
     key    = "os"
-    values = [ubuntu]
+    values = ["ubuntu"]
   }
 //  targets {
 //    key    = "InstanceIds"
