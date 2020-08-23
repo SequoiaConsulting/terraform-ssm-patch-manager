@@ -52,7 +52,11 @@ variable "ssm_patching_logs_bucket" {
   description = "Bucket name of outputted log information from each automation task run."
   default= "ssm-patch-seq"
 }
-
+variable "max_errors" {
+  type = string
+  description = "Number of errors before task is marked failed"
+  default = "3"
+}
 //variable "common_tags" {
 //  type = map(string)
 //}
