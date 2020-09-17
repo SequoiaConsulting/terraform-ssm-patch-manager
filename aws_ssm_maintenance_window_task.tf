@@ -7,7 +7,7 @@ resource "aws_ssm_maintenance_window_task" "patch" {
   priority         = 1
   service_role_arn = aws_iam_role.patching_role.arn
   max_concurrency  = "10"
-  max_errors       = "1"
+  max_errors       = var.max_errors
 
   targets {
     key    = "WindowTargetIds"
